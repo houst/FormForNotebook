@@ -18,30 +18,29 @@ public class InputNote {
 	}
 	
 	public void fillNote(Note note) {
-		final Note newNote = new Note();
 		
-		newNote.setFirstName(inputStringValue(TextConstant.FIRST_NAME, RegexContainer.REGEX_NAME));
-		newNote.setMiddleName(inputStringValue(TextConstant.MIDDLE_NAME, RegexContainer.REGEX_NAME));
-		newNote.setLastName(inputStringValue(TextConstant.LAST_NAME, RegexContainer.REGEX_NAME));
+		note.setFirstName(inputStringValue(TextConstant.FIRST_NAME, RegexContainer.REGEX_NAME));
+		note.setMiddleName(inputStringValue(TextConstant.MIDDLE_NAME, RegexContainer.REGEX_NAME));
+		note.setLastName(inputStringValue(TextConstant.LAST_NAME, RegexContainer.REGEX_NAME));
 		
-		newNote.setNickname(inputStringValue(TextConstant.NICKNAME, RegexContainer.REGEX_NICKNAME));
-		newNote.setComment(inputStringValue(TextConstant.COMMENT, RegexContainer.REGEX_COMMENT));
+		note.setNickname(inputStringValue(TextConstant.NICKNAME, RegexContainer.REGEX_NICKNAME));
+		note.setComment(inputStringValue(TextConstant.COMMENT, RegexContainer.REGEX_COMMENT));
 		
-		newNote.setHomePhone(inputStringValue(TextConstant.HOME_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
-		newNote.setMobilePhone(inputStringValue(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
-		newNote.setMobilePhoneExtra(inputStringValue(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
+		note.setHomePhone(inputStringValue(TextConstant.HOME_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
+		note.setMobilePhone(inputStringValue(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
+		note.setMobilePhoneExtra(inputStringValue(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
 		
-		newNote.setEmail(inputStringValue(TextConstant.EMAIL, RegexContainer.REGEX_EMAIL));
-		newNote.setSkype(inputStringValue(TextConstant.SKYPE, RegexContainer.REGEX_SKYPE));
+		note.setEmail(inputStringValue(TextConstant.EMAIL, RegexContainer.REGEX_EMAIL));
+		note.setSkype(inputStringValue(TextConstant.SKYPE, RegexContainer.REGEX_SKYPE));
 		
-		newNote.setCity(inputStringValue(TextConstant.CITY, RegexContainer.REGEX_NAME));
-		newNote.setHouse(inputStringValue(TextConstant.HOUSE, RegexContainer.REGEX_NUMBER));
-		newNote.setApartment(inputStringValue(TextConstant.APARTMENT, RegexContainer.REGEX_NUMBER));
-		newNote.setZipCode(inputStringValue(TextConstant.ZIP_CODE, RegexContainer.REGEX_NUMBER));
+		note.setCity(inputStringValue(TextConstant.CITY, RegexContainer.REGEX_NAME));
+		note.setHouse(inputStringValue(TextConstant.HOUSE, RegexContainer.REGEX_NUMBER));
+		note.setApartment(inputStringValue(TextConstant.APARTMENT, RegexContainer.REGEX_NUMBER));
+		note.setZipCode(inputStringValue(TextConstant.ZIP_CODE, RegexContainer.REGEX_NUMBER));
 		
 		long currentTime = System.currentTimeMillis();
-		newNote.setCreated(new Date(currentTime));
-		newNote.setLastUpdate(new Date(currentTime));
+		note.setCreated(new Date(currentTime));
+		note.setLastUpdate(new Date(currentTime));
 		
 	}
 	
