@@ -32,12 +32,13 @@ public class InputNote {
 		
 		note.setHomePhone(inputStringValueWithScanner(HOME_PHONE, REGEX_PHONE_NUMBER));
 		note.setMobilePhone(inputStringValueWithScanner(MOBILE_PHONE, REGEX_PHONE_NUMBER));
-		note.setMobilePhoneExtra(inputStringValueWithScanner(MOBILE_PHONE, REGEX_PHONE_NUMBER));
+		note.setMobilePhoneExtra(inputStringValueWithScanner(MOBILE_PHONE_EXTRA, REGEX_PHONE_NUMBER));
 		
 		note.setEmail(inputStringValueWithScanner(EMAIL, REGEX_EMAIL));
 		note.setSkype(inputStringValueWithScanner(SKYPE, REGEX_SKYPE));
 		
 		note.setCity(inputStringValueWithScanner(CITY, REGEX_NAME));
+		note.setStreet(inputStringValueWithScanner(STREET, REGEX_NAME));
 		note.setHouse(inputStringValueWithScanner(HOUSE, REGEX_NUMBER));
 		note.setApartment(inputStringValueWithScanner(APARTMENT, REGEX_NUMBER));
 		note.setZipCode(inputStringValueWithScanner(ZIP_CODE, REGEX_NUMBER));

@@ -21,7 +21,23 @@ public class NoteController {
 		InputNote inputNote = new InputNote(consoleView);
 		inputNote.fillNote(note);
 		
-		
+		consoleView.printMessage(new StringBuilder()
+				.append(note.getLastName())
+				.append(" ")
+				.append(note.getFirstName().charAt(0))
+				.append(".")
+				.toString());
+		consoleView.printMessage(new StringBuilder()
+				.append(note.getCity())
+				.append(" ")
+				.append(note.getStreet())
+				.append(" ")
+				.append(note.getHouse())
+				.append(" ")
+				.append(note.getApartment())
+				.toString());
+		consoleView.printMessage(note.getGroup().name());
+		consoleView.printMessage(note.getComment());
 		
 	}
 	
