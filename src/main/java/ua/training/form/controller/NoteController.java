@@ -21,6 +21,8 @@ public class NoteController {
 		InputNote inputNote = new InputNote(consoleView);
 		inputNote.fillNote(note);
 		
+		
+		
 	}
 	
 }

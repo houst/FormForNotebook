@@ -11,6 +11,7 @@ public interface TextConstant {
     String MIDDLE_NAME = "middle.name";
     String LAST_NAME = "last.name";
     
+    String GROUP = "group";
     String NICKNAME = "nickname";
     String COMMENT = "comment";
     
