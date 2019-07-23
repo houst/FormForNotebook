@@ -16,8 +16,8 @@ public class ConsoleView {
 	public static final ResourceBundle bundle = 
 			ResourceBundle.getBundle(
 					"messages",
-//					new Locale("ua", "UA"));
-					new Locale("en"));
+					new Locale("ua", "UA"));
+//					new Locale("en"));
 	
 	public void printMessage(String message) {
 		System.out.println(message);
