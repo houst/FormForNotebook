@@ -1,6 +1,7 @@
 package ua.training.form.controller;
 
 import java.util.Date;
+import java.util.Scanner;
 
 import ua.training.form.model.Note;
 import ua.training.form.view.ConsoleView;
@@ -19,24 +20,24 @@ public class InputNote {
 	
 	public void fillNote(Note note) {
 		
-		note.setFirstName(inputStringValue(TextConstant.FIRST_NAME, RegexContainer.REGEX_NAME));
-		note.setMiddleName(inputStringValue(TextConstant.MIDDLE_NAME, RegexContainer.REGEX_NAME));
-		note.setLastName(inputStringValue(TextConstant.LAST_NAME, RegexContainer.REGEX_NAME));
+		note.setFirstName(inputStringValueWithScanner(TextConstant.FIRST_NAME, RegexContainer.REGEX_NAME));
+		note.setMiddleName(inputStringValueWithScanner(TextConstant.MIDDLE_NAME, RegexContainer.REGEX_NAME));
+		note.setLastName(inputStringValueWithScanner(TextConstant.LAST_NAME, RegexContainer.REGEX_NAME));
 		
-		note.setNickname(inputStringValue(TextConstant.NICKNAME, RegexContainer.REGEX_NICKNAME));
-		note.setComment(inputStringValue(TextConstant.COMMENT, RegexContainer.REGEX_COMMENT));
+		note.setNickname(inputStringValueWithScanner(TextConstant.NICKNAME, RegexContainer.REGEX_NICKNAME));
+		note.setComment(inputStringValueWithScanner(TextConstant.COMMENT, RegexContainer.REGEX_COMMENT));
 		
-		note.setHomePhone(inputStringValue(TextConstant.HOME_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
-		note.setMobilePhone(inputStringValue(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
-		note.setMobilePhoneExtra(inputStringValue(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
+		note.setHomePhone(inputStringValueWithScanner(TextConstant.HOME_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
+		note.setMobilePhone(inputStringValueWithScanner(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
+		note.setMobilePhoneExtra(inputStringValueWithScanner(TextConstant.MOBILE_PHONE, RegexContainer.REGEX_PHONE_NUMBER));
 		
-		note.setEmail(inputStringValue(TextConstant.EMAIL, RegexContainer.REGEX_EMAIL));
-		note.setSkype(inputStringValue(TextConstant.SKYPE, RegexContainer.REGEX_SKYPE));
+		note.setEmail(inputStringValueWithScanner(TextConstant.EMAIL, RegexContainer.REGEX_EMAIL));
+		note.setSkype(inputStringValueWithScanner(TextConstant.SKYPE, RegexContainer.REGEX_SKYPE));
 		
-		note.setCity(inputStringValue(TextConstant.CITY, RegexContainer.REGEX_NAME));
-		note.setHouse(inputStringValue(TextConstant.HOUSE, RegexContainer.REGEX_NUMBER));
-		note.setApartment(inputStringValue(TextConstant.APARTMENT, RegexContainer.REGEX_NUMBER));
-		note.setZipCode(inputStringValue(TextConstant.ZIP_CODE, RegexContainer.REGEX_NUMBER));
+		note.setCity(inputStringValueWithScanner(TextConstant.CITY, RegexContainer.REGEX_NAME));
+		note.setHouse(inputStringValueWithScanner(TextConstant.HOUSE, RegexContainer.REGEX_NUMBER));
+		note.setApartment(inputStringValueWithScanner(TextConstant.APARTMENT, RegexContainer.REGEX_NUMBER));
+		note.setZipCode(inputStringValueWithScanner(TextConstant.ZIP_CODE, RegexContainer.REGEX_NUMBER));
 		
 		long currentTime = System.currentTimeMillis();
 		note.setCreated(new Date(currentTime));
@@ -44,14 +45,16 @@ public class InputNote {
 		
 	}
 	
-	private String inputStringValue(String fieldName, String regex) {
+	private String inputStringValueWithScanner(String fieldName, String regex) {
+		
+		Scanner sc = ScannerSingleton.getInstance().getScanner();
 		
 		consoleView.printStringInput(fieldName, regex);
-		String inputStr = ScannerUtil.inputStringValueWithScanner();
+		String inputStr = sc.nextLine();
 		
 		while( ! inputStr.matches(regex)) {
 			consoleView.printWrongStringInput(fieldName, regex);
-			inputStr = ScannerUtil.inputStringValueWithScanner();
+			inputStr = sc.nextLine();
 		}
 		
 		return inputStr;
