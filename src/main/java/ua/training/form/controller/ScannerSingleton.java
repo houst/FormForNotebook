@@ -15,6 +15,10 @@ public class ScannerSingleton {
 		return SingletonHelper.INSTANCE;
 	}
 	
+	/**
+	 * This method is needed to return scanner which can be usable everywhere as already instantiated object
+	 * @return Instance of already instantiated object of Scanner.class
+	 */
 	public Scanner getScanner() {
 		return sc;
 	}

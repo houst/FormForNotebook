@@ -23,21 +23,22 @@ public class NoteController {
 		
 		consoleView.printMessage(new StringBuilder()
 				.append(note.getLastName())
-				.append(" ")
+				.append(' ')
 				.append(note.getFirstName().charAt(0))
-				.append(".")
+				.append('.')
 				.toString());
 		consoleView.printMessage(new StringBuilder()
 				.append(note.getCity())
-				.append(" ")
+				.append(' ')
 				.append(note.getStreet())
-				.append(" ")
+				.append(' ')
 				.append(note.getHouse())
-				.append(" ")
+				.append(' ')
 				.append(note.getApartment())
 				.toString());
 		consoleView.printMessage(note.getGroup().name());
 		consoleView.printMessage(note.getComment());
+		consoleView.printMessage(note.getLastUpdate().toString());
 		
 	}
 	
