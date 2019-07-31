@@ -1,4 +1,4 @@
-package ua.training.form.controller;
+package ua.training.form.util;
 
 import java.util.Scanner;
 

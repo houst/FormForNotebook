@@ -26,6 +26,30 @@ public class Note {
 	private Date created;
 	private Date lastUpdate;
 	
+	public Note() {}
+	
+	public Note(String firstName, String middleName, String lastName, Group group, String nickname, String comment, String homePhone, String mobilePhone, String mobilePhoneExtra, String email, String skype, String city, String street, String house,
+			String apartment, String zipCode, Date created, Date lastUpdate) {
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+		this.group = group;
+		this.nickname = nickname;
+		this.comment = comment;
+		this.homePhone = homePhone;
+		this.mobilePhone = mobilePhone;
+		this.mobilePhoneExtra = mobilePhoneExtra;
+		this.email = email;
+		this.skype = skype;
+		this.city = city;
+		this.street = street;
+		this.house = house;
+		this.apartment = apartment;
+		this.zipCode = zipCode;
+		this.created = created;
+		this.lastUpdate = lastUpdate;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}

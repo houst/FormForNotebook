@@ -1,4 +1,4 @@
-package ua.training.form.controller;
+package ua.training.form.util;
 
 /**
  * Created by oleglitvinenko on Jul 19, 2019
