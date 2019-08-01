@@ -3,8 +3,8 @@ package ua.training.form.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import ua.training.form.entity.Note;
 import ua.training.form.entity.Notes;
-import ua.training.form.model.Note;
 
 public class EnumNoteDAO implements INoteDao {
 	

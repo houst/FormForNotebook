@@ -2,7 +2,7 @@ package ua.training.form.dao;
 
 import java.util.List;
 
-import ua.training.form.model.Note;
+import ua.training.form.entity.Note;
 
 public interface INoteDao {
 	

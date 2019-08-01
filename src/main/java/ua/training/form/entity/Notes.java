@@ -1,7 +1,5 @@
 package ua.training.form.entity;
 
-import ua.training.form.model.Note;
-
 public enum Notes {
 	Object1(
 			new Note(

@@ -1,7 +1,7 @@
 package ua.training.form.controller;
 
+import ua.training.form.entity.Note;
 import ua.training.form.exception.NicknameIsExisted;
-import ua.training.form.model.Note;
 import ua.training.form.view.ConsoleView;
 
 /**

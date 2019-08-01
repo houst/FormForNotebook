@@ -6,8 +6,8 @@ import static ua.training.form.view.TextConstant.*;
 import java.util.Date;
 import java.util.Scanner;
 
+import ua.training.form.entity.Note;
 import ua.training.form.exception.NicknameIsExisted;
-import ua.training.form.model.Note;
 import ua.training.form.service.NoteService;
 import ua.training.form.util.ScannerSingleton;
 import ua.training.form.view.ConsoleView;

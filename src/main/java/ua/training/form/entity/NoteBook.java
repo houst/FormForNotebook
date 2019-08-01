@@ -1,4 +1,4 @@
-package ua.training.form.model;
+package ua.training.form.entity;
 
 import java.util.ArrayList;
 import java.util.List;

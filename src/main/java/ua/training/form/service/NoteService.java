@@ -1,8 +1,8 @@
 package ua.training.form.service;
 
 import ua.training.form.dao.EnumNoteDAO;
+import ua.training.form.entity.Note;
 import ua.training.form.exception.NicknameIsExisted;
-import ua.training.form.model.Note;
 
 public class NoteService {
 	

@@ -1,7 +1,7 @@
 package ua.training.form;
 
 import ua.training.form.controller.MainController;
-import ua.training.form.model.Note;
+import ua.training.form.entity.Note;
 import ua.training.form.view.ConsoleView;
 
 /**
